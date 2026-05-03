@@ -11,8 +11,8 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* تم حذف الطبقة البيضاء هنا لتظهر الصورة بوضوح */
-            background-image: url('hicham.jpeg');
+            /* التعديل هنا: حيدنا اللون الأبيض وخلينا غير الصورة بوحدها */
+            background-image: url('hicham.jpeg'); 
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -20,14 +20,14 @@
             color: #333;
         }
         header {
-            /* طبقة داكنة خفيفة جداً في الهيدر فقط لإبراز النص الأبيض */
+            /* الهيدر خليناه بطبقة كحلة خفيفة باش النص الأبيض يبان واضح */
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hicham.jpeg');
             background-size: cover;
             background-position: center;
             padding: 60px 30px;
             text-align: center;
             color: white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
         .container {
             max-width: 1100px;
@@ -43,41 +43,40 @@
             border-radius: 20px;
             padding: 40px 20px;
             text-align: center;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.4s ease;
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             cursor: pointer;
             color: white;
-            /* زيادة الضبابية لإعطاء تأثير زجاجي فخم فوق الصورة الواضحة */
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            /* هاد السطر كيدير ضبابية خفيفة ورا المربعات باش يعطي منظر عصري فوق الصورة */
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
         .card:hover {
-            transform: translateY(-10px) scale(1.02);
+            transform: translateY(-10px);
             box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         }
 
-        /* --- ألوان المربعات (تحافظ على جمالية الخلفية) --- */
-        .card-khobz { background-color: rgba(211, 84, 0, 0.8); }
+        /* ألوان المربعات مع شفافية باش يبانو فوق الصورة */
+        .card-khobz { background-color: rgba(211, 84, 0, 0.85); }
         .card-msemen { 
-            background-color: rgba(241, 196, 15, 0.8); 
+            background-color: rgba(241, 196, 15, 0.85); 
             color: #2d3436; 
         }
-        .card-harcha { background-color: rgba(230, 126, 34, 0.8); }
-        .card-krachel { background-color: rgba(39, 174, 96, 0.8); }
-        .card-batbout { background-color: rgba(41, 128, 185, 0.8); }
-        .card-msemen-amer { background-color: rgba(192, 57, 43, 0.8); }
-        .card-halwa { background-color: rgba(142, 68, 173, 0.8); }
+        .card-harcha { background-color: rgba(230, 126, 34, 0.85); }
+        .card-krachel { background-color: rgba(39, 174, 96, 0.85); }
+        .card-batbout { background-color: rgba(41, 128, 185, 0.85); }
+        .card-msemen-amer { background-color: rgba(192, 57, 43, 0.85); }
+        .card-halwa { background-color: rgba(142, 68, 173, 0.85); }
 
         .card h3 {
             margin: 0 0 10px 0;
             font-size: 1.8em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
         .card p {
             font-size: 1.1em;
+            opacity: 1;
             font-weight: 500;
-            margin: 0;
         }
         footer {
             text-align: center;
