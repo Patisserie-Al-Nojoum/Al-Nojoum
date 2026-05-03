@@ -35,21 +35,43 @@
         }
         .card {
             background: white;
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 20px;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             cursor: pointer;
+            border-bottom: 5px solid transparent; /* خط ملون لتحت */
         }
         .card:hover {
             transform: translateY(-10px);
-            background-color: #faedcd;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
         }
+
+        /* ألوان مخصصة لكل نوع */
+        .card-khobz { border-color: #8b4513; } /* بني للخبز */
+        .card-khobz:hover { background-color: #fff9f0; }
+
+        .card-msemen { border-color: #ffb703; } /* ذهبي للمسمن */
+        .card-msemen:hover { background-color: #fffdee; }
+
+        .card-harcha { border-color: #fb8500; } /* برتقالي للحرشة */
+        .card-harcha:hover { background-color: #fff7ed; }
+
+        .card-krachel { border-color: #606c38; } /* أخضر زيتوني للقراشل */
+        .card-krachel:hover { background-color: #f6f9f0; }
+
+        .card-batbout { border-color: #e9c46a; } /* أصفر رملي للبطبوط */
+        .card-batbout:hover { background-color: #fffcf4; }
+
+        .card-halwa { border-color: #e76f51; } /* وردي/أحمر للحلويات */
+        .card-halwa:hover { background-color: #fff5f2; }
+
         .card h3 {
-            color: #bc6c25;
-            margin-bottom: 10px;
+            margin-top: 10px;
+            color: #283618;
         }
+        
         footer {
             text-align: center;
             padding: 20px;
@@ -68,31 +90,31 @@
 
 <div class="container">
     <div class="grid">
-        <div class="card">
+        <div class="card card-khobz">
             <h3>الخبز الشهي</h3>
             <p>المالح والمسوس</p>
         </div>
-        <div class="card">
+        <div class="card card-msemen">
             <h3>المسمن</h3>
             <p>مورق وساخن</p>
         </div>
-        <div class="card">
+        <div class="card card-harcha">
             <h3>الحرشة</h3>
             <p>حرشة السميد الممتازة</p>
         </div>
-        <div class="card">
+        <div class="card card-krachel">
             <h3>القراشل</h3>
             <p>منسمة بالنافع والزنجلان</p>
         </div>
-        <div class="card">
+        <div class="card card-msemen">
             <h3>المسمن العامر</h3>
             <p>بحشوة لذيذة</p>
         </div>
-        <div class="card">
+        <div class="card card-batbout">
             <h3>بطبوط</h3>
             <p>رطب وخفيف</p>
         </div>
-        <div class="card">
+        <div class="card card-halwa">
             <h3>الحلويات</h3>
             <p>تشكيلة متنوعة لكل المناسبات</p>
         </div>
