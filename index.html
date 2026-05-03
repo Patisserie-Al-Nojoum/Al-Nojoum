@@ -6,94 +6,94 @@
     <title>Pâtisserie Al Nojoum | مخبزة النجوم</title>
     <style>
         :root {
-            --primary-color: #d4a373;
-            --secondary-color: #fefae0;
-            --text-color: #333;
+            --primary-color: #2d3436; /* لون غامق للهيدر باش يبرز ألوان الكارطات */
+            --secondary-color: #f1f2f6;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--secondary-color);
             margin: 0;
-            color: var(--text-color);
+            color: #333;
         }
         header {
             background-color: var(--primary-color);
-            padding: 20px;
+            padding: 30px;
             text-align: center;
             color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         .container {
-            max-width: 1000px;
-            margin: 20px auto;
+            max-width: 1100px;
+            margin: 30px auto;
             padding: 0 15px;
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
         .card {
-            border-radius: 15px;
-            padding: 30px 20px;
+            border-radius: 20px;
+            padding: 40px 20px;
             text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             cursor: pointer;
-            border: 2px solid rgba(0,0,0,0.05);
+            color: white; /* النص أبيض باش يبان فوق الألوان الغامقة */
         }
         .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
 
-        /* تخصيص خلفية كل منطقة */
+        /* --- الألوان الواضحة (Strong Colors) --- */
+        
         .card-khobz { 
-            background-color: #ede0d4; /* بني فاتح جداً */
-            border-bottom: 5px solid #7f5539;
+            background-color: #d35400; /* برتقالي محروق */
         }
         
         .card-msemen { 
-            background-color: #fef3c7; /* أصفر ذهبي فاتح */
-            border-bottom: 5px solid #f59e0b;
+            background-color: #f1c40f; /* أصفر ذهبي فاقع */
+            color: #2d3436; /* النص كحل هنا حيت الأصفر فاتح */
         }
 
         .card-harcha { 
-            background-color: #ffedd5; /* برتقالي فاتح */
-            border-bottom: 5px solid #fb923c;
+            background-color: #e67e22; /* برتقالي دافئ */
         }
 
         .card-krachel { 
-            background-color: #ecf3e4; /* أخضر فاتح */
-            border-bottom: 5px solid #606c38;
+            background-color: #27ae60; /* أخضر ملكي */
         }
 
         .card-batbout { 
-            background-color: #fefce8; /* أصفر كريمي */
-            border-bottom: 5px solid #eab308;
+            background-color: #2980b9; /* أزرق ملكي */
+        }
+
+        .card-msemen-amer {
+            background-color: #c0392b; /* أحمر داكن */
         }
 
         .card-halwa { 
-            background-color: #fce7f3; /* وردي فاتح */
-            border-bottom: 5px solid #ec4899;
+            background-color: #8e44ad; /* بنفسجي جذاب */
         }
 
         .card h3 {
-            margin-top: 0;
-            color: #2d2d2d;
-            font-size: 1.4em;
+            margin: 0 0 10px 0;
+            font-size: 1.8em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
         
         .card p {
-            color: #555;
-            margin-bottom: 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin: 0;
         }
         
         footer {
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9em;
+            padding: 30px;
+            margin-top: 50px;
+            background: #fff;
             color: #666;
         }
     </style>
@@ -102,51 +102,44 @@
 
 <header>
     <h1>مخبزة النجوم - Pâtisserie Al Nojoum</h1>
-    <p>أجود أنواع المخبوزات والحلويات التقليدية</p>
+    <p>أصالة المذاق المغربي بألوان تفتح الشهية</p>
 </header>
 
 <div class="container">
     <div class="grid">
-        <!-- الخبز -->
         <div class="card card-khobz">
             <h3>الخبز الشهي</h3>
             <p>المالح والمسوس</p>
         </div>
         
-        <!-- المسمن -->
         <div class="card card-msemen">
             <h3>المسمن</h3>
             <p>مورق وساخن بالزبدة</p>
         </div>
         
-        <!-- الحرشة -->
         <div class="card card-harcha">
             <h3>الحرشة</h3>
             <p>حرشة السميد الممتازة</p>
         </div>
         
-        <!-- القراشل -->
         <div class="card card-krachel">
             <h3>القراشل</h3>
             <p>منسمة بالنافع والزنجلان</p>
         </div>
         
-        <!-- المسمن عامر -->
-        <div class="card card-msemen">
+        <div class="card card-msemen-amer">
             <h3>المسمن العامر</h3>
-            <p>بحشوة لذيذة وشهية</p>
+            <p>بحشوة لذيذة وحارة</p>
         </div>
         
-        <!-- البطبوط -->
         <div class="card card-batbout">
             <h3>بطبوط</h3>
-            <p>رطب وخفيف (مطلوع)</p>
+            <p>رطب وخفيف للمناسبات</p>
         </div>
         
-        <!-- الحلويات -->
         <div class="card card-halwa">
             <h3>الحلويات</h3>
-            <p>تشكيلة متنوعة لكل المناسبات</p>
+            <p>حلويات مغربية وعصرية</p>
         </div>
     </div>
 </div>
