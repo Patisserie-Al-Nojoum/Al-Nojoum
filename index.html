@@ -6,18 +6,25 @@
     <title>Pâtisserie Al Nojoum | مخبزة النجوم</title>
     <style>
         :root {
-            --primary-color: #2d3436; /* لون غامق للهيدر باش يبرز ألوان الكارطات */
+            --primary-color: #2d3436;
             --secondary-color: #f1f2f6;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--secondary-color);
+            /* إضافة الصورة كخلفية للمنطقة كاملة */
+            background-image: linear-gradient(rgba(241, 242, 246, 0.8), rgba(241, 242, 246, 0.8)), url('17778222543062865527298210926912_fea9e7.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* الصورة كتبقى ثابتة فاش كتهبط */
             margin: 0;
             color: #333;
         }
         header {
-            background-color: var(--primary-color);
-            padding: 30px;
+            /* إضافة الصورة للهيدر مع طبقة غامقة */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('17778222543062865527298210926912_fea9e7.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 30px;
             text-align: center;
             color: white;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -39,61 +46,42 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             cursor: pointer;
-            color: white; /* النص أبيض باش يبان فوق الألوان الغامقة */
+            color: white;
+            /* إضافة شفافية خفيفة للألوان باش تبان الخلفية */
+            backdrop-filter: blur(5px); /* تأثير ضبابي كيعطي منظر عصري */
         }
         .card:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
 
-        /* --- الألوان الواضحة (Strong Colors) --- */
-        
-        .card-khobz { 
-            background-color: #d35400; /* برتقالي محروق */
-        }
-        
+        /* --- الألوان مع الشفافية (Opacity) --- */
+        .card-khobz { background-color: rgba(211, 84, 0, 0.85); }
         .card-msemen { 
-            background-color: #f1c40f; /* أصفر ذهبي فاقع */
-            color: #2d3436; /* النص كحل هنا حيت الأصفر فاتح */
+            background-color: rgba(241, 196, 15, 0.85); 
+            color: #2d3436; 
         }
-
-        .card-harcha { 
-            background-color: #e67e22; /* برتقالي دافئ */
-        }
-
-        .card-krachel { 
-            background-color: #27ae60; /* أخضر ملكي */
-        }
-
-        .card-batbout { 
-            background-color: #2980b9; /* أزرق ملكي */
-        }
-
-        .card-msemen-amer {
-            background-color: #c0392b; /* أحمر داكن */
-        }
-
-        .card-halwa { 
-            background-color: #8e44ad; /* بنفسجي جذاب */
-        }
+        .card-harcha { background-color: rgba(230, 126, 34, 0.85); }
+        .card-krachel { background-color: rgba(39, 174, 96, 0.85); }
+        .card-batbout { background-color: rgba(41, 128, 185, 0.85); }
+        .card-msemen-amer { background-color: rgba(192, 57, 43, 0.85); }
+        .card-halwa { background-color: rgba(142, 68, 173, 0.85); }
 
         .card h3 {
             margin: 0 0 10px 0;
             font-size: 1.8em;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
-        
         .card p {
             font-size: 1.1em;
             opacity: 0.9;
             margin: 0;
         }
-        
         footer {
             text-align: center;
             padding: 30px;
             margin-top: 50px;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
             color: #666;
         }
     </style>
@@ -102,7 +90,7 @@
 
 <header>
     <h1>مخبزة النجوم - Pâtisserie Al Nojoum</h1>
-    <p>أصالة المذاق المغربي </p>
+    <p>أصالة المذاق المغربي بألوان تفتح الشهية</p>
 </header>
 
 <div class="container">
@@ -111,32 +99,26 @@
             <h3>الخبز الشهي</h3>
             <p>المالح والمسوس</p>
         </div>
-        
         <div class="card card-msemen">
             <h3>المسمن</h3>
             <p>مورق وساخن بالزبدة</p>
         </div>
-        
         <div class="card card-harcha">
             <h3>الحرشة</h3>
             <p>حرشة السميد الممتازة</p>
         </div>
-        
         <div class="card card-krachel">
             <h3>القراشل</h3>
             <p>منسمة بالنافع والزنجلان</p>
         </div>
-        
         <div class="card card-msemen-amer">
             <h3>المسمن العامر</h3>
             <p>بحشوة لذيذة وحارة</p>
         </div>
-        
         <div class="card card-batbout">
             <h3>بطبوط</h3>
             <p>رطب وخفيف للمناسبات</p>
         </div>
-        
         <div class="card card-halwa">
             <h3>الحلويات</h3>
             <p>حلويات مغربية وعصرية</p>
