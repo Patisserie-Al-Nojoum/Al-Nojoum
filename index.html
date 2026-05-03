@@ -34,42 +34,59 @@
             gap: 20px;
         }
         .card {
-            background: white;
             border-radius: 15px;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             cursor: pointer;
-            border-bottom: 5px solid transparent; /* خط ملون لتحت */
+            border: 2px solid rgba(0,0,0,0.05);
         }
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
-        /* ألوان مخصصة لكل نوع */
-        .card-khobz { border-color: #8b4513; } /* بني للخبز */
-        .card-khobz:hover { background-color: #fff9f0; }
+        /* تخصيص خلفية كل منطقة */
+        .card-khobz { 
+            background-color: #ede0d4; /* بني فاتح جداً */
+            border-bottom: 5px solid #7f5539;
+        }
+        
+        .card-msemen { 
+            background-color: #fef3c7; /* أصفر ذهبي فاتح */
+            border-bottom: 5px solid #f59e0b;
+        }
 
-        .card-msemen { border-color: #ffb703; } /* ذهبي للمسمن */
-        .card-msemen:hover { background-color: #fffdee; }
+        .card-harcha { 
+            background-color: #ffedd5; /* برتقالي فاتح */
+            border-bottom: 5px solid #fb923c;
+        }
 
-        .card-harcha { border-color: #fb8500; } /* برتقالي للحرشة */
-        .card-harcha:hover { background-color: #fff7ed; }
+        .card-krachel { 
+            background-color: #ecf3e4; /* أخضر فاتح */
+            border-bottom: 5px solid #606c38;
+        }
 
-        .card-krachel { border-color: #606c38; } /* أخضر زيتوني للقراشل */
-        .card-krachel:hover { background-color: #f6f9f0; }
+        .card-batbout { 
+            background-color: #fefce8; /* أصفر كريمي */
+            border-bottom: 5px solid #eab308;
+        }
 
-        .card-batbout { border-color: #e9c46a; } /* أصفر رملي للبطبوط */
-        .card-batbout:hover { background-color: #fffcf4; }
-
-        .card-halwa { border-color: #e76f51; } /* وردي/أحمر للحلويات */
-        .card-halwa:hover { background-color: #fff5f2; }
+        .card-halwa { 
+            background-color: #fce7f3; /* وردي فاتح */
+            border-bottom: 5px solid #ec4899;
+        }
 
         .card h3 {
-            margin-top: 10px;
-            color: #283618;
+            margin-top: 0;
+            color: #2d2d2d;
+            font-size: 1.4em;
+        }
+        
+        .card p {
+            color: #555;
+            margin-bottom: 0;
         }
         
         footer {
@@ -90,30 +107,43 @@
 
 <div class="container">
     <div class="grid">
+        <!-- الخبز -->
         <div class="card card-khobz">
             <h3>الخبز الشهي</h3>
             <p>المالح والمسوس</p>
         </div>
+        
+        <!-- المسمن -->
         <div class="card card-msemen">
             <h3>المسمن</h3>
-            <p>مورق وساخن</p>
+            <p>مورق وساخن بالزبدة</p>
         </div>
+        
+        <!-- الحرشة -->
         <div class="card card-harcha">
             <h3>الحرشة</h3>
             <p>حرشة السميد الممتازة</p>
         </div>
+        
+        <!-- القراشل -->
         <div class="card card-krachel">
             <h3>القراشل</h3>
             <p>منسمة بالنافع والزنجلان</p>
         </div>
+        
+        <!-- المسمن عامر -->
         <div class="card card-msemen">
             <h3>المسمن العامر</h3>
-            <p>بحشوة لذيذة</p>
+            <p>بحشوة لذيذة وشهية</p>
         </div>
+        
+        <!-- البطبوط -->
         <div class="card card-batbout">
             <h3>بطبوط</h3>
-            <p>رطب وخفيف</p>
+            <p>رطب وخفيف (مطلوع)</p>
         </div>
+        
+        <!-- الحلويات -->
         <div class="card card-halwa">
             <h3>الحلويات</h3>
             <p>تشكيلة متنوعة لكل المناسبات</p>
