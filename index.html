@@ -5,13 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pâtisserie Al Nojoum | مخبزة النجوم</title>
     <style>
-        :root {
-            --primary-color: #2d3436;
-            --secondary-color: #f1f2f6;
-        }
+        :root { --primary-color: #2d3436; --secondary-color: #f1f2f6; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* التعديل هنا: حيدنا اللون الأبيض وخلينا غير الصورة بوحدها */
             background-image: url('hicham.jpg'); 
             background-size: cover;
             background-position: center;
@@ -20,7 +16,6 @@
             color: #333;
         }
         header {
-            /* الهيدر خليناه بطبقة كحلة خفيفة باش النص الأبيض يبان واضح */
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Zoubida.jpg');
             background-size: cover;
             background-position: center;
@@ -29,16 +24,14 @@
             color: white;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
-        .container {
-            max-width: 1100px;
-            margin: 30px auto;
-            padding: 0 15px;
-        }
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 15px; }
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
+        /* Style dyal l-card m-liyi */
+        .card-link { text-decoration: none; display: block; }
         .card {
             border-radius: 20px;
             padding: 40px 20px;
@@ -47,46 +40,22 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             cursor: pointer;
             color: white;
-            /* هاد السطر كيدير ضبابية خفيفة ورا المربعات باش يعطي منظر عصري فوق الصورة */
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
         }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
 
-        /* ألوان المربعات مع شفافية باش يبانو فوق الصورة */
         .card-khobz { background-color: rgba(211, 84, 0, 0.85); }
-        .card-msemen { 
-            background-color: rgba(241, 196, 15, 0.85); 
-            color: #2d3436; 
-        }
+        .card-msemen { background-color: rgba(241, 196, 15, 0.85); color: #2d3436; }
         .card-harcha { background-color: rgba(230, 126, 34, 0.85); }
         .card-krachel { background-color: rgba(39, 174, 96, 0.85); }
         .card-batbout { background-color: rgba(41, 128, 185, 0.85); }
         .card-msemen-amer { background-color: rgba(192, 57, 43, 0.85); }
         .card-halwa { background-color: rgba(142, 68, 173, 0.85); }
 
-        .card h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.8em;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-        }
-        .card p {
-            font-size: 1.1em;
-            opacity: 1;
-            font-weight: 500;
-        }
-        footer {
-            text-align: center;
-            padding: 30px;
-            margin-top: 50px;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(5px);
-            color: #2d3436;
-            font-weight: bold;
-        }
+        .card h3 { margin: 0 0 10px 0; font-size: 1.8em; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
+        .card p { font-size: 1.1em; opacity: 1; font-weight: 500; }
+        footer { text-align: center; padding: 30px; margin-top: 50px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(5px); color: #2d3436; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -98,34 +67,48 @@
 
 <div class="container">
     <div class="grid">
-        <div class="card card-khobz">
-            <h3>الخبز الشهي</h3>
-            <p>المالح والمسوس</p>
-        </div>
-        <div class="card card-msemen">
-            <h3>المسمن</h3>
-            <p>مورق وساخن بالزبدة</p>
-        </div>
-        <div class="card card-harcha">
-            <h3>الحرشة</h3>
-            <p>حرشة السميد الممتازة</p>
-        </div>
-        <div class="card card-krachel">
-            <h3>القراشل</h3>
-            <p>منسمة بالنافع والزنجلان</p>
-        </div>
-        <div class="card card-msemen-amer">
-            <h3>المسمن العامر</h3>
-            <p>بحشوة لذيذة وحارة</p>
-        </div>
-        <div class="card card-batbout">
-            <h3>بطبوط</h3>
-            <p>رطب وخفيف للمناسبات</p>
-        </div>
-        <div class="card card-halwa">
-            <h3>الحلويات</h3>
-            <p>حلويات مغربية وعصرية</p>
-        </div>
+        <a href="khobz.html" class="card-link">
+            <div class="card card-khobz">
+                <h3>الخبز الشهي</h3>
+                <p>المالح والمسوس</p>
+            </div>
+        </a>
+        <a href="msemen.html" class="card-link">
+            <div class="card card-msemen">
+                <h3>المسمن</h3>
+                <p>مورق وساخن بالزبدة</p>
+            </div>
+        </a>
+        <a href="harcha.html" class="card-link">
+            <div class="card card-harcha">
+                <h3>الحرشة</h3>
+                <p>حرشة السميد الممتازة</p>
+            </div>
+        </a>
+        <a href="krachel.html" class="card-link">
+            <div class="card card-krachel">
+                <h3>القراشل</h3>
+                <p>منسمة بالنافع والزنجلان</p>
+            </div>
+        </a>
+        <a href="msemen-amer.html" class="card-link">
+            <div class="card card-msemen-amer">
+                <h3>المسمن العامر</h3>
+                <p>بحشوة لذيذة وحارة</p>
+            </div>
+        </a>
+        <a href="batbout.html" class="card-link">
+            <div class="card card-batbout">
+                <h3>بطبوط</h3>
+                <p>رطب وخفيف للمناسبات</p>
+            </div>
+        </a>
+        <a href="halwa.html" class="card-link">
+            <div class="card card-halwa">
+                <h3>الحلويات</h3>
+                <p>حلويات مغربية وعصرية</p>
+            </div>
+        </a>
     </div>
 </div>
 
