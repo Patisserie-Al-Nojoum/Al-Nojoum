@@ -5,8 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>معرض الصور | Pâtisserie Al Nojoum</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; text-align: center; }
-        .gallery-title { color: #2d3436; margin-bottom: 30px; border-bottom: 3px solid #d35400; display: inline-block; padding-bottom: 10px; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background-color: #f8f9fa; 
+            margin: 0; 
+            padding: 20px; 
+            text-align: center; 
+        }
+        
+        .gallery-title { 
+            color: #2d3436; 
+            margin-bottom: 30px; 
+            border-bottom: 3px solid #d35400; 
+            display: inline-block; 
+            padding-bottom: 10px; 
+        }
+
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -14,17 +28,45 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .product-card {
-            background: white;
+            background: #ffffff; /* Lon byad l-lkartona kamla */
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ddel khfif bach tban mtrouza */
             transition: 0.3s;
         }
-        .product-card:hover { transform: scale(1.03); }
-        .product-card img { width: 100%; height: 200px; object-fit: cover; }
-        .info { padding: 15px; }
-        .price { color: #e67e22; font-size: 1.3em; font-weight: bold; margin: 10px 0; }
+
+        .product-card:hover { 
+            transform: translateY(-5px); /* Kat-tl3 chwiya mli t-cliki/t-hover */
+        }
+
+        .product-card img { 
+            width: 100%; 
+            height: 220px; 
+            object-fit: cover; 
+            display: block;
+        }
+
+        .info { 
+            padding: 20px; 
+            background-color: #ffffff; /* Had la zone rj3at b-lbyad naqi */
+            border-top: 1px solid #f1f1f1; /* Fasil rqiq m3a tswira */
+        }
+
+        .info h3 {
+            margin: 0;
+            color: #2d3436;
+            font-size: 1.4em;
+        }
+
+        .price { 
+            color: #d35400; 
+            font-size: 1.3em; 
+            font-weight: bold; 
+            margin: 10px 0 0 0; 
+        }
+
         .back-btn {
             display: inline-block;
             margin-top: 40px;
