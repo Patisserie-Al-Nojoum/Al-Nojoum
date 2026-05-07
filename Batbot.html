@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض البطبوط</title>
+    <style>
+        /* Stylage l-3am */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* L-unwan dyal l-page */
+        .title-section {
+            text-align: center;
+            background: linear-gradient(135deg, #56CCF2, #2F80ED); /* Nefs l-lone l-zre9 */
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Grid d s-swar */
+        .batbot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Style d kol tswira */
+        .batbot-item {
+            background: white;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .batbot-item:hover {
+            transform: scale(1.05); /* Tswira t-kber chwiya melli t-cliki aw t-7et souris */
+        }
+
+        .batbot-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Bach tswira mat-khserch */
+            border-radius: 8px;
+        }
+
+        /* Bouton dyal rjo3 */
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 25px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #555;
+        }
+
+        /* Responsive l-mobile */
+        @media (max-width: 600px) {
+            .batbot-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 tswirat f ster f t-lfn */
+                gap: 10px;
+            }
+            .batbot-item img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-btn">← الرجوع للرئيسية</a>
+
+    <div class="title-section">
+        <h1>معرض البطبوط</h1>
+        <p>اكتشف تشكيلة البطبوط المميزة لدينا</p>
+    </div>
+
+    <div class="batbot-grid">
+        <div class="batbot-item"><img src="b1.jpg" alt="بطبوط"></div>
+        <div class="batbot-item"><img src="b2.jpg" alt="بطبوط"></div>
+        <div class="batbot-item"><img src="b3.jpg" alt="بطبوط"></div>
+        <div class="batbot-item"><img src="b4.jpg" alt="بطبوط"></div>
+        <div class="batbot-item"><img src="b5.jpg" alt="بطبوط"></div>
+        <div class="batbot-item"><img src="b6.jpg" alt="بطبوط"></div>
+        <div class="batbot-item"><img src="b7.jpg" alt="بطبوط"></div>
+        <div class="batbot-item"><img src="b8.jpg" alt="بطبوط"></div>
+    </div>
+
+</body>
+</html>
