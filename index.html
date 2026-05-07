@@ -30,7 +30,6 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
-        /* Style dyal l-card m-liyi */
         .card-link { text-decoration: none; display: block; }
         .card {
             border-radius: 20px;
@@ -45,7 +44,15 @@
         }
         .card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
 
-        .card-khobz { background-color: rgba(211, 84, 0, 0.85); }
+        /* Hna l-isla7: La card dyal l-khobz rj3at bayda */
+        .card-Khobz { 
+            background-color: rgba(255, 255, 255, 0.95); /* Lon byad naqi */
+            color: #d35400 !important; /* L-ktaba wellat b l-orange bach tban */
+            border: 2px solid #d35400; /* Itar bach t-fsel 3la l-khalfya */
+        }
+        .card-Khobz p { color: #2d3436; } /* L-ktaba sghira b rmmadi ghameq */
+
+        /* L-cards lokhrin khellithom kima kanou f l-code dyalk */
         .card-msemen { background-color: rgba(241, 196, 15, 0.85); color: #2d3436; }
         .card-harcha { background-color: rgba(230, 126, 34, 0.85); }
         .card-krachel { background-color: rgba(39, 174, 96, 0.85); }
@@ -53,7 +60,7 @@
         .card-msemen-amer { background-color: rgba(192, 57, 43, 0.85); }
         .card-halwa { background-color: rgba(142, 68, 173, 0.85); }
 
-        .card h3 { margin: 0 0 10px 0; font-size: 1.8em; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
+        .card h3 { margin: 0 0 10px 0; font-size: 1.8em; text-shadow: 1px 1px 3px rgba(0,0,0,0.1); }
         .card p { font-size: 1.1em; opacity: 1; font-weight: 500; }
         footer { text-align: center; padding: 30px; margin-top: 50px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(5px); color: #2d3436; font-weight: bold; }
     </style>
