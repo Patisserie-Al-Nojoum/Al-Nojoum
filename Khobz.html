@@ -6,102 +6,112 @@
     <title>معرض الصور | Pâtisserie Al Nojoum</title>
     <style>
         body { 
-            font-family: 'Segoe UI', sans-serif; 
-            background-color: #f8f9fa; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f0f2f5; /* Khalfya d l-ghalaf bach tban l-card bayda ktr */
             margin: 0; 
             padding: 20px; 
             text-align: center; 
         }
         
         .gallery-title { 
-            color: #2d3436; 
+            color: #1a1a1a; 
             margin-bottom: 30px; 
-            border-bottom: 3px solid #d35400; 
+            border-bottom: 4px solid #e67e22; 
             display: inline-block; 
-            padding-bottom: 10px; 
+            padding-bottom: 10px;
+            font-size: 2em;
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .product-card {
-            background: #ffffff; /* Lon byad l-lkartona kamla */
-            border-radius: 15px;
+            background: #ffffff; /* L-byad s-safi */
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ddel khfif bach tban mtrouza */
-            transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Ddel khfif bzzaf bach tban l-card bayda */
+            transition: all 0.3s ease;
+            border: 1px solid #eeeeee; /* Itar rqiq bach y-byen l-byad */
         }
 
         .product-card:hover { 
-            transform: translateY(-5px); /* Kat-tl3 chwiya mli t-cliki/t-hover */
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
         .product-card img { 
             width: 100%; 
-            height: 220px; 
+            height: 230px; 
             object-fit: cover; 
             display: block;
+            border-bottom: 2px solid #f9f9f9; /* Fasil bayed mabin t-tswira o l-info */
         }
 
         .info { 
-            padding: 20px; 
-            background-color: #ffffff; /* Had la zone rj3at b-lbyad naqi */
-            border-top: 1px solid #f1f1f1; /* Fasil rqiq m3a tswira */
+            padding: 25px; 
+            background: #ffffff; /* Tahid ay blur wala opacity */
         }
 
         .info h3 {
             margin: 0;
-            color: #2d3436;
-            font-size: 1.4em;
+            color: #2c3e50; /* Lon ghameq bach l-khalfiya l-bayda t-drab f l-3in */
+            font-size: 1.5em;
+            letter-spacing: 0.5px;
         }
 
         .price { 
             color: #d35400; 
-            font-size: 1.3em; 
-            font-weight: bold; 
-            margin: 10px 0 0 0; 
+            font-size: 1.4em; 
+            font-weight: 800; 
+            margin-top: 12px;
+            display: block;
         }
 
         .back-btn {
             display: inline-block;
-            margin-top: 40px;
-            padding: 12px 25px;
+            margin-top: 50px;
+            padding: 15px 35px;
             background: #2d3436;
-            color: white;
+            color: #ffffff;
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 50px;
             font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #e67e22;
         }
     </style>
 </head>
 <body>
 
-    <h1 class="gallery-title">قائمة المنتجات</h1>
+    <h1 class="gallery-title">مخبزة النجوم - معرضنا</h1>
 
     <div class="gallery-grid">
         <div class="product-card">
             <img src="khobz.jpg" alt="الخبز الشهي">
             <div class="info">
                 <h3>الخبز الشهي</h3>
-                <p class="price">2.00 درهم</p>
+                <span class="price">2.00 درهم</span>
             </div>
         </div>
 
         <div class="product-card">
-            <img src="khobzz.jpg" alt="الخبز الشهي">
+            <img src="khobzz.jpg" alt="الخبز الشهي الممتاز">
             <div class="info">
                 <h3>الخبز الشهي</h3>
-                <p class="price">2.50 درهم</p>
+                <span class="price">2.50 درهم</span>
             </div>
         </div>
     </div>
 
-    <a href="index.html" class="back-btn">← الرجوع للرئيسية</a>
+    <a href="index.html" class="back-btn">← العودة للصفحة الرئيسية</a>
 
 </body>
 </html>
