@@ -63,29 +63,43 @@
 
         /* Footer Styling */
         footer { 
-            display: grid;
-            grid-template-columns: 1fr auto 1fr; /* تقسيم الفوتر لثلاث تلاتات باش الوسط يبقى سنتر */
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            padding: 30px; 
+            padding: 30px 50px; 
             margin-top: 50px; 
-            background: rgba(255, 255, 255, 0.8); 
+            background: rgba(255, 255, 255, 0.9); 
             backdrop-filter: blur(5px); 
             color: #2d3436; 
+            direction: ltr; /* لتثبيت المواقع: اليمين يبقى يمين واليسار يسار */
         }
-        .footer-center { text-align: center; font-weight: bold; }
-        .footer-center span { display: block; font-size: 0.9em; font-weight: normal; margin-top: 5px; }
         
-        .footer-left { text-align: left; }
-        .insta-logo { text-decoration: none; display: inline-block; transition: transform 0.3s; }
+        .footer-center { 
+            flex-grow: 1; 
+            text-align: center; 
+            font-weight: bold; 
+            font-size: 1.1em;
+            direction: rtl; 
+        }
+        .footer-center span { 
+            display: block; 
+            font-size: 0.95em; 
+            color: #d35400; /* لون مميز للعبارة الإضافية */
+            margin-top: 5px;
+            font-weight: 600;
+        }
+        
+        .footer-left { order: -1; } /* يضمن بقاء اللوغو على اليسار */
+        .insta-logo { text-decoration: none; transition: transform 0.3s; display: block; }
         .insta-logo:hover { transform: scale(1.1); }
-        .insta-logo img { width: 35px; height: 35px; vertical-align: middle; }
+        .insta-logo img { width: 35px; height: 35px; }
 
-        /* For empty right space to balance the grid */
-        .footer-right { visibility: hidden; }
+        /* Placeholder to balance the center */
+        .footer-right-spacer { width: 35px; }
 
         @media (max-width: 600px) {
-            footer { display: flex; flex-direction: column-reverse; gap: 20px; }
-            .footer-left { text-align: center; }
+            footer { flex-direction: column; gap: 15px; padding: 20px; }
+            .footer-right-spacer { display: none; }
         }
     </style>
 </head>
@@ -144,21 +158,21 @@
 </div>
 
 <footer>
-    <!-- Instagram Logo on the left -->
+    <!-- Instagram Logo on the Left -->
     <div class="footer-left">
         <a href="https://www.instagram.com/al_noujoum?igsh=MWFheGpyenYwODJ6eg==" target="_blank" class="insta-logo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
         </a>
     </div>
 
-    <!-- Rights and Address in the center -->
+    <!-- Rights and Address in the Center -->
     <div class="footer-center">
         © 2026 Pâtisserie Al Nojoum
         <span>Fès, Maroc | L'excellence dans l'art du goût</span>
     </div>
 
-    <!-- Empty space for balance -->
-    <div class="footer-right"></div>
+    <!-- Spacer for balance -->
+    <div class="footer-right-spacer"></div>
 </footer>
 
 </body>
