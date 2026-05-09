@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المسمن المغربي | مخبزة النجوم</title>
+    <style>
+        :root { --primary-color: #f1c40f; --text-color: #2d3436; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            color: var(--text-color);
+        }
+        header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('msemen-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+        .nav-back { padding: 20px; text-align: right; }
+        .nav-back a { text-decoration: none; color: #e67e22; font-weight: bold; font-size: 1.1em; }
+        
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        
+        .description {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        /* معرض الصور - Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .gallery img:hover { transform: scale(1.05); }
+
+        footer { text-align: center; padding: 40px; background: #eee; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<div class="nav-back">
+    <a href="index.html">← العودة للرئيسية</a>
+</div>
+
+<header>
+    <h1>المسمن المغربي الأصيل</h1>
+    <p>مورق، ساخن، ومحضر بعناية فائقة</p>
+</header>
+
+<div class="container">
+    <div class="description">
+        <h2>جودة مخبزة النجوم</h2>
+        <p>نقدم لكم في مخبزة النجوم أفضل أنواع المسمن المغربي التقليدي. يتميز المسمن لدينا بكونه مورقاً وهشاً، نستخدم فيه أجود أنواع الدقيق والزبدة لضمان مذاق لا يقاوم.</p>
+        <ul>
+            <li>مسمن عادي بالزبدة والعسل</li>
+            <li>ملوي مورق بطريقة تقليدية</li>
+            <li>خالٍ من المواد الحافظة - طري يومياً</li>
+        </ul>
+    </div>
+
+    <h2 style="text-align: center; color: #d35400;">معرض الصور (8 أنواع من المسمن)</h2>
+    <div class="gallery">
+        <!-- تأكد من تسمية الصور في مجلد الموقع من msmn1 إلى msmn8 -->
+        <img src="msmn1.jpg" alt="مسمن مغربي 1">
+        <img src="msmn2.jpg" alt="مسمن مغربي 2">
+        <img src="msmn3.jpg" alt="مسمن مغربي 3">
+        <img src="msmn4.jpg" alt="مسمن مغربي 4">
+        <img src="msmn5.jpg" alt="مسمن مغربي 5">
+        <img src="msmn6.jpg" alt="مسمن مغربي 6">
+        <img src="msmn7.jpg" alt="مسمن مغربي 7">
+        <img src="msmn8.jpg" alt="مسمن مغربي 8">
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 مخبزة النجوم - Pâtisserie Al Nojoum</p>
+</footer>
+
+</body>
+</html>
