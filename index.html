@@ -61,55 +61,81 @@
         .card h3 { margin: 0 0 10px 0; font-size: 1.8em; text-shadow: 1px 1px 3px rgba(0,0,0,0.1); }
         .card p { font-size: 1.1em; opacity: 1; font-weight: 500; }
 
-        /* Footer Styling */
+        /* --- Footer Artistic Styling --- */
         footer { 
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 30px 50px; 
-            margin-top: 50px; 
-            background: rgba(255, 255, 255, 0.9); 
-            backdrop-filter: blur(5px); 
-            color: #2d3436; 
+            padding: 40px 50px; 
+            margin-top: 60px; 
+            background: rgba(255, 255, 255, 0.92); 
+            backdrop-filter: blur(10px); 
+            border-top: 1px solid rgba(211, 84, 0, 0.2);
             direction: ltr;
         }
         
         .footer-center { 
             flex-grow: 1; 
             text-align: center; 
-            font-weight: bold; 
-            font-size: 1.1em;
             direction: rtl; 
         }
+
+        .footer-center h4 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #2d3436;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .footer-center .artistic-divider {
+            height: 1px;
+            width: 60px;
+            background: #d35400;
+            margin: 10px auto;
+        }
+
         .footer-center .address { 
             display: block; 
-            font-size: 0.95em; 
+            font-size: 0.9em; 
             color: #d35400;
-            margin-top: 5px;
+            font-style: italic;
             font-weight: 600;
         }
+
         .footer-center .rights {
             display: block;
-            font-size: 0.85em;
-            color: #636e72;
-            margin-top: 3px;
-            font-weight: normal;
+            font-size: 0.75em;
+            color: #b2bec3;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         
         .footer-left { order: -1; }
-        .insta-logo { text-decoration: none; transition: transform 0.3s; display: block; }
-        .insta-logo:hover { transform: scale(1.1); }
-        .insta-logo img { width: 35px; height: 35px; }
+        .insta-logo { 
+            text-decoration: none; 
+            transition: all 0.3s ease; 
+            display: block; 
+            filter: grayscale(20%);
+        }
+        .insta-logo:hover { 
+            transform: rotate(10deg) scale(1.15); 
+            filter: grayscale(0%);
+        }
+        .insta-logo img { width: 32px; height: 32px; }
 
-        .footer-right-spacer { width: 35px; }
+        .footer-right-spacer { width: 32px; }
 
         @media (max-width: 600px) {
-            footer { flex-direction: column; gap: 15px; padding: 20px; }
+            footer { flex-direction: column; gap: 20px; padding: 30px 20px; }
             .footer-right-spacer { display: none; }
         }
     </style>
 </head>
 <body>
+
+<!-- ... (نفس محتوى الـ Header والـ Container السابق) ... -->
 
 <header>
     <h1>مخبزة النجوم - Pâtisserie Al Nojoum</h1>
@@ -118,7 +144,6 @@
 
 <div class="container">
     <div class="grid">
-        <!-- نفس البطاقات السابقة -->
         <a href="Khobz.html" class="card-link">
             <div class="card card-Khobz">
                 <h3>الخبز الشهي</h3>
@@ -165,21 +190,22 @@
 </div>
 
 <footer>
-    <!-- Instagram Logo on the Left -->
+    <!-- Instagram Logo (Left Side) -->
     <div class="footer-left">
         <a href="https://www.instagram.com/al_noujoum?igsh=MWFheGpyenYwODJ6eg==" target="_blank" class="insta-logo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
         </a>
     </div>
 
-    <!-- Center Content -->
+    <!-- Artistic Center Content -->
     <div class="footer-center">
-        © 2026 Pâtisserie Al Nojoum
-        <span class="address">Fès, Maroc | L'excellence dans l'art du goût</span>
-        <span class="rights">Tous droits réservés</span>
+        <h4>© 2026 Pâtisserie Al Nojoum</h4>
+        <div class="artistic-divider"></div>
+        <span class="address">Fès, Maroc — L'excellence dans l'art du goût</span>
+        <span class="rights">Tous Droits Réservés</span>
     </div>
 
-    <!-- Spacer -->
+    <!-- Balancing Spacer -->
     <div class="footer-right-spacer"></div>
 </footer>
 
