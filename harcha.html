@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حرشة النجوم | الفخامة التقليدية</title>
+    <style>
+        :root { 
+            --harcha-gold: #e67e22; 
+            --harcha-dark: #d35400;
+            --bg-light: #fffaf0; 
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            margin: 0;
+            color: #2d3436;
+        }
+
+        /* تصميم الهيدر بشكل مختلف - دائري من الأسفل */
+        header {
+            background: linear-gradient(135deg, rgba(230, 126, 34, 0.9), rgba(211, 84, 0, 0.9)), url('harcha-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            border-bottom-left-radius: 50% 20px;
+            border-bottom-right-radius: 50% 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .nav-back { padding: 25px; text-align: right; }
+        .nav-back a { 
+            text-decoration: none; 
+            color: var(--harcha-dark); 
+            font-weight: bold; 
+            border: 2px solid var(--harcha-dark);
+            padding: 8px 20px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+        .nav-back a:hover { background: var(--harcha-dark); color: white; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+
+        /* قسم الوصف بتصميم "البطاقة العائمة" */
+        .info-section {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            margin-top: -60px; /* تداخل مع الهيدر لمظهر عصري */
+            position: relative;
+            z-index: 10;
+        }
+
+        .info-text { flex: 1; }
+        .info-text h2 { color: var(--harcha-dark); margin-top: 0; font-size: 2em; }
+        .info-text p { font-size: 1.1em; line-height: 1.8; color: #636e72; }
+
+        /* معرض الصور بـ 4 صور فقط وتصميم هندسي */
+        .harcha-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* شبكة 2x2 */
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .harcha-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            height: 350px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .harcha-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .harcha-item:hover img { transform: scale(1.1); }
+
+        /* لمسة فنية: تراكب نصي يظهر عند تمرير الفأرة */
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 20px;
+            opacity: 0;
+            transition: 0.4s;
+        }
+
+        .harcha-item:hover .overlay { opacity: 1; }
+
+        footer { 
+            text-align: center; 
+            padding: 50px; 
+            background: #2d3436; 
+            color: #dfe6e9; 
+            margin-top: 80px; 
+        }
+
+        /* تحسينات للهاتف */
+        @media (max-width: 768px) {
+            .harcha-grid { grid-template-columns: 1fr; }
+            .info-section { flex-direction: column; text-align: center; padding: 25px; }
+            .harcha-item { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav-back">
+    <a href="index.html">← العودة للرئيسية</a>
+</div>
+
+<header>
+    <h1>حرشة النجوم الذهبية</h1>
+    <p>سر السميد الممتاز والوصفة التقليدية</p>
+</header>
+
+<div class="container">
+    <div class="info-section">
+        <div class="info-text">
+            <h2>لماذا حرشة مخبزتنا؟</h2>
+            <p>في مخبزة النجوم، نحضر الحرشة يومياً باستخدام سميد القمح الصلب والزبدة الطبيعية. نعتمد على الطريقة الفاسية الأصيلة التي تجعل الحرشة هشة من الداخل ومقرمشة من الخارج.</p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                <span style="background: #fff3e0; color: #e67e22; padding: 5px 15px; border-radius: 15px; font-weight: bold;">🌾 سميد ممتاز</span>
+                <span style="background: #fff3e0; color: #e67e22; padding: 5px 15px; border-radius: 15px; font-weight: bold;">🍯 مثالية مع العسل</span>
+                <span style="background: #fff3e0; color: #e67e22; padding: 5px 15px; border-radius: 15px; font-weight: bold;">⏲️ طازجة كل صباح</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="harcha-grid">
+        <!-- الصورة الأولى -->
+        <div class="harcha-item">
+            <img src="harcha.jpg" alt="حرشة مغربية دائرية">
+            <div class="overlay">حرشة دائرية كلاسيكية</div>
+        </div>
+        
+        <!-- الصورة الثانية -->
+        <div class="harcha-item">
+            <img src="harcha1.jpg" alt="حرشة صغيرة - حريشات">
+            <div class="overlay">حريشات صغار للمناسبات</div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="harcha-item">
+            <img src="harcha2.jpg" alt="حرشة بالزعتر">
+            <div class="overlay">حرشة منسمة بالأعشاب</div>
+        </div>
+
+        <!-- الصورة الرابعة -->
+        <div class="harcha-item">
+            <img src="harcha3.jpg" alt="حرشة مقطعة">
+            <div class="overlay">تقديم عصري وشهي</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 مخبزة النجوم - الفن الأصيل في الطبخ المغربي</p>
+</footer>
+
+</body>
+</html>
