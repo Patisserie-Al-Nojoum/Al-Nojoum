@@ -5,167 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المسمن العامر | مخبزة النجوم</title>
     <style>
-        :root { 
-            --accent-color: #c0392b; /* أحمر دافئ للحشوة */
-            --bg-color: #fdf2f2; 
-        }
-
+        :root { --main-red: #c0392b; --warm-orange: #e67e22; }
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
+            background-color: #fff5f5;
             margin: 0;
-            color: #2d3436;
+            color: #333;
         }
 
-        /* هيدر بتصميم مائل جذاب */
+        /* هيدر عصري مع تأثير الـ Overlay */
         header {
-            background: linear-gradient(45deg, rgba(192, 57, 43, 0.9), rgba(231, 76, 60, 0.8)), url('amer-bg.jpg');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('amer-bg.jpg');
             background-size: cover;
             background-position: center;
-            padding: 80px 20px;
-            text-align: center;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: white;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
-        .nav-back { padding: 20px; }
+        .nav-back { position: absolute; top: 20px; right: 20px; }
         .nav-back a { 
             text-decoration: none; 
-            color: var(--accent-color); 
+            color: white; 
+            background: var(--main-red);
+            padding: 10px 20px;
+            border-radius: 30px;
             font-weight: bold;
-            background: white;
-            padding: 8px 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-
-        /* قسم التقديم */
-        .intro-box {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            border-right: 10px solid var(--accent-color);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin-bottom: 50px;
-        }
-
-        /* شبكة عرض الصور بتصميم مختلف (Alternating Layout) */
-        .food-item {
-            display: flex;
-            background: white;
-            margin-bottom: 30px;
-            border-radius: 25px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            align-items: center;
             transition: 0.3s;
         }
 
-        .food-item:hover { transform: scale(1.02); }
+        .container { max-width: 1100px; margin: -50px auto 50px auto; padding: 0 20px; }
 
-        .food-item img {
-            width: 40%;
+        /* صندوق الوصف */
+        .intro-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .intro-card h2 { color: var(--main-red); font-size: 2.2em; margin-bottom: 15px; }
+
+        /* شبكة الصور الاحترافية */
+        .amer-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .photo-card {
+            background: white;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.4s ease-in-out;
+            position: relative;
+        }
+
+        .photo-card:hover { transform: translateY(-10px) rotate(2deg); }
+
+        .photo-card img {
+            width: 100%;
             height: 250px;
             object-fit: cover;
+            border-radius: 10px;
         }
 
-        .food-info {
-            padding: 30px;
-            width: 60%;
+        .photo-card .caption {
+            padding: 15px 5px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--main-red);
         }
 
-        .food-info h3 { color: var(--accent-color); margin-top: 0; }
-
-        /* جعل الصور تتبادل الأماكن (واحدة يمين وواحدة يسار) */
-        .food-item:nth-child(even) { flex-direction: row-reverse; text-align: left; }
-        .food-item:nth-child(even) .food-info { text-align: left; }
-
-        .tag {
-            display: inline-block;
-            background: #ffeaa7;
-            color: #d35400;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.9em;
-            margin-bottom: 10px;
+        /* لمسة الديكور: ملصق "حار" أو "شهي" */
+        .badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #ff7675;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            transform: rotate(-15deg);
         }
 
-        footer { text-align: center; padding: 40px; background: #2d3436; color: white; }
-
-        @media (max-width: 768px) {
-            .food-item { flex-direction: column !important; text-align: center !important; }
-            .food-item img { width: 100%; height: 200px; }
-            .food-info { width: 100%; }
-        }
+        footer { text-align: center; padding: 40px; background: #2d3436; color: white; margin-top: 50px; }
     </style>
 </head>
 <body>
 
-<div class="nav-back">
-    <a href="index.html">← العودة للرئيسية</a>
-</div>
-
 <header>
-    <h1>المسمن العامر الشهي</h1>
-    <p>وصفاتنا الخاصة بحشوات غنية ونكهة لا تقاوم</p>
+    <div class="nav-back">
+        <a href="index.html">← العودة للرئيسية</a>
+    </div>
+    <h1>المسمن العامر (الرغايف)</h1>
+    <p>لذة الحشوة المغربية التقليدية</p>
 </header>
 
 <div class="container">
-    <div class="intro-box">
-        <h2>شهيوات النجوم</h2>
-        <p>نقدم لكم المسمن العامر بالطريقة التقليدية "ديال الدار". نستخدم خضروات طازجة، لحم مفروم ممتاز، وتوابل مغربية أصيلة تمنحه ذلك المذاق الحار والمميز.</p>
+    <div class="intro-card">
+        <h2>شهيوات مخبزة النجوم</h2>
+        <p>نقدم لكم تشكيلة متنوعة من المسمن العامر المحشو بعناية. سواء كنتم من محبي حشوة "الشحمة" التقليدية أو "الكفتة" الغنية، مخبزتنا تضمن لكم مذاقاً لا ينسى.</p>
     </div>
 
-    <!-- عرض 4 صور بتصميم مختلف -->
-    <div class="food-display">
-        
-        <!-- الصنف 1 -->
-        <div class="food-item">
-            <img src="Msemna1.jpg" alt="مسمن عامر بالشحمة">
-            <div class="food-info">
-                <span class="tag">الأكثر طلباً</span>
-                <h3>مسمن بالشحمة والأعشاب</h3>
-                <p>الوصفة التقليدية التي نعشقها جميعاً، محشوة بالبصل والتحميرة والشحمة المذابة بعناية.</p>
-            </div>
+    <div class="amer-gallery">
+        <!-- الصورة 1 -->
+        <div class="photo-card">
+            <span class="badge">الأكثر طلباً</span>
+            <img src="Msemna2.jpg" alt="مسمن عامر 1">
+            <div class="caption">بصل وشحمة تقليدي</div>
         </div>
 
-        <!-- الصنف 2 -->
-        <div class="food-item">
-            <img src="Msemna2.jpg" alt="مسمن بالكفتة">
-            <div class="food-info">
-                <span class="tag">غني بالبروتين</span>
-                <h3>مسمن معمر بالكفتة</h3>
-                <p>حشوة فاخرة من اللحم المفروم المتبل مع الفلفل الألوان والبقدونس الطازج.</p>
-            </div>
+        <!-- الصورة 2 -->
+        <div class="photo-card">
+            <img src="Msemna1.jpg" alt="مسمن عامر 2">
+            <div class="caption">حشوة الكفتة والخضر</div>
         </div>
 
-        <!-- الصنف 3 -->
-        <div class="food-item">
-            <img src="Msemna3.jpg" alt="مسمن بالخضر">
-            <div class="food-info">
-                <span class="tag">نكهة حارة</span>
-                <h3>مسمن بالخضر والحار</h3>
-                <p>مزيج رائع من الجزر والقرع الأخضر والفلفل مع لمسة من الهريسة المغربية.</p>
-            </div>
+        <!-- الصورة 3 -->
+        <div class="photo-card">
+            <span class="badge">حار 🔥</span>
+            <img src="Msemna3.jpg" alt="مسمن عامر 3">
+            <div class="caption">بالفلفل الحار والزيتون</div>
         </div>
 
-        <!-- الصنف 4 -->
-        <div class="food-item">
-            <img src="Msemna4.jpg" alt="مسمن في الفرن">
-            <div class="food-info">
-                <span class="tag">مقرمش</span>
-                <h3>رغائف عامرين في الفرن</h3>
-                <p>مسمن مطهو في الفرن ليعطي قرمشة إضافية من الخارج وطراوة من الداخل.</p>
-            </div>
+        <!-- الصورة 4 -->
+        <div class="photo-card">
+            <img src="Msemna4.jpg" alt="مسمن عامر 4">
+            <div class="caption">رغايف الفرن المقرمشة</div>
         </div>
-
     </div>
 </div>
 
 <footer>
-    <p>© 2026 مخبزة النجوم - الجودة هي عنواننا</p>
+    <p>© 2026 مخبزة النجوم - مدينة فاس</p>
 </footer>
 
 </body>
